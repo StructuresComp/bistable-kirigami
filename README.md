@@ -1,0 +1,1 @@
+To be prepared for both trilayer and bilayer
