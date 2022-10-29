@@ -12,8 +12,8 @@ Mohammad K. Jawed*.
 <!-- Add table of contents -->
 ## Table of Contents
 - [Title](#title)
-- [Table of Contents](#table-of-contents)
 - [Description](#description)
+- [Table of Contents](#table-of-contents)
 - [Pre-requisites](#pre-requisites)
 - [Files](#files)
 - [Usage](#usage)
@@ -39,11 +39,11 @@ The code is written for ABAQUS 2018 and MATLAB R2022a. The MATLAB code is used t
 3. Design a mesh for your kirigami structure. The code currently supports cross-shaped and lotus-shaped kirigami designs. You can modify the code to support other designs as well.
 <figure class="half" style="display:flex">
     <figure>
-    <img style="scale:100%" src="images/cross_mesh.png">
+    <img style="scale:50%" src="images/cross_mesh.png">
         <figcaption>Cross-shaped Kirigami, Square-shaped substrate</figcaption>
     </figure>
     <figure>
-    <img style="scale:100%" src="images/lotus_mesh.png">
+    <img style="scale:50%" src="images/lotus_mesh.png">
         <figcaption>Lotus-shaped Kirigami, Circle-shaped substrate</figcaption>
     </figure>
 
