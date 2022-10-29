@@ -128,15 +128,11 @@ for c=1:Nstrips+1
         % fprintf('Part number found: %d\n', c);
     end
 end
-cutOutElements = findElements(FEMesh,'region','Face', circlePartNo);
-
 
 figure(2);
 % F = pdegplot(model, 'FaceLabels','on');
 pdeplot(model);
 hold on
-plot(nodes2D(1,:), nodes2D(2,:), 'ro');
-cutOutElements = findElements(FEMesh,'region','Face',circlePartNo);
 pdemesh(FEMesh.Nodes, FEMesh.Elements(:,cutOutElements),'EdgeColor','green');
 hold off
 
