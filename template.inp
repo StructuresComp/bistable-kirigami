@@ -45,7 +45,7 @@ ELSUBSTRATE, GRAV, 1., 0., 0., -1.
 ** FIELD OUTPUT: F-Output-1
 ** 
 ** Add FREQUENCY=1 to control output data
-*Output, field, FREQUENCY=
+*Output, field, FREQUENCY=1
 *Node Output
 U, COORD
 *Element Output
@@ -53,5 +53,5 @@ S, E, ELSE
 ** 
 ** HISTORY OUTPUT: H-Output-1
 ** 
-*Output, history, variable=PRESELECT, FREQUENCY=100000
+*Output, history, variable=PRESELECT, FREQUENCY=1
 *End Step

@@ -60,7 +60,8 @@ The code is written for ABAQUS 2018 and MATLAB R2022a. The MATLAB code is used t
 5. Start your ABAQUS license and run the Main file. It will generate the input files for ABAQUS and run the simulation. It will also post-process the results and save them in a .txt file. You can also check the .odb file to see the results of the simulation. <br>
 (Check the progress of your code in the .sta file. Any errors will be displayed in either the .log, .dat or .msg file.)
 
-
+## Disclaimer
+This code does not account for contact modelling. Hence, it is not designed for too high deformations.
 <!-- Add contributing -->
 ## Contributing
 Feedback is welcome! For major changes, please open an issue first to discuss what you would like to change.

@@ -139,7 +139,9 @@ xDesired = 0.0;
 yDesired = 0.0;
 dist = sqrt( (x2D - xDesired).^2 + (y2D - yDesired).^2 );
 [~, minInd] = min(dist);
-fprintf(fid, '*Nset, nset=centerNode\n%d\n', minInd+num_nodes2D*(floor((nLayers*3+1)/2-1)));
+for i = 0: nLayers
+    fprintf(fid, '*Nset, nset=centerNode%d\n%d\n', i, minInd+num_nodes2D*(nLayers+i));
+end
 
 fprintf(fid, '*Solid Section, elset=elSubstrate, material=Material-Substrate\n');
 fprintf(fid, '*Solid Section, elset=elBot, material=Material-Kirigami\n');
@@ -154,7 +156,9 @@ fid = fopen(bcFile,'w');
 % Fix the center node of the composite
 fprintf(fid,'**Name: BC1 Type: Displacement/Rotation\n');
 fprintf(fid,'*Boundary\n');
-fprintf(fid, 'centerNode, 1, 6,%f\n', 0.0);
+for i = 0: nLayers
+    fprintf(fid, 'centerNode%d, 1, 6,%f\n', i, 0.0);
+end
 
 % Initiate Pre-stretch in terms of initial stress conditions
 fprintf(fid,'**\n** PREDIFINED FIELDS\n**\n');
